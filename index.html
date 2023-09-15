@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="javascript/Controller.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="formbox text-center">
+            <button id="closeform" class="btn">X</button>
+            <h3>Add Task</h3>
+            <form onsubmit="return false">
+            <input type="text" class="form-control" id="id" placeholder="id" required>
+            <input type="text" class="form-control" id="title" placeholder="Task Title" required>
+            <input type="text" class="form-control" id="desc" placeholder="Task Desc" required>
+            <input type="color" class="form-control" id="color" placeholder="Enter Color">
+            <input type="date" class="form-control" id="date" placeholder="Enter date">
+            <input type="text" class="form-control" id="url" placeholder="Enter Url">
+            <div class="d-flex">
+                <button type="submit" id="submittask" class="btn btn-success m-2">Submit</button>
+                <button type="reset" class="btn btn-dark m-2">Clear All</button>
+            </div>
+            
+        </form>
+        </div>
+        <div class="d-flex bg-secondary p-2 m-3">
+        <button class="btn btn-danger" id="addbtn">Add</button>
+        <button class="btn" id="delete">Delete</button>
+        <button class="btn">Update</button>
+        <button id="search" class="btn btn-warning">Search</button>
+        <button id="save" class="btn btn-primary">Save</button>
+        <button id="load" class="btn btn-dark">Load</button>
+        <button class="btn">Load From Server</button>
+        <button class="btn">Clear All</button>
+    </div>
+    <div class="searchbox">
+        <div class="d-flex">
+            <input type="text" id="searchinput" class="form-control" placeholder="Enter Id or Task Title">
+        <button class="btn btn-primary" id="searchbtn">Search</button>
+        </div>
+    </div>
+    <div class="">
+        <span>Total Records : <strong id="total"></strong></span>
+        <span> Marked Records : <strong  id="marked"></strong></span>
+        <span> UnMarked Records : <strong id="unmarked"></strong></span>
+       
+       
+    </div>
+    <div class="taskitems">
+        <table class="table table-hover">
+            <thead class="">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Desc</th>
+                    <th>Color</th>
+                    <th>Date</th>
+                    <th>Url</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody id="itemstask">
+                
+            </tbody>
+        </table>
+    </div>
+    </div>
+    
+</body>
+</html>

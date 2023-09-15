@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.formbox {
+    display: none;
+  position: absolute;
+  width: 70%;
+  padding: 50px 50px;
+  background-color: #8f8f8f;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 22px;
+  transition: 3s;
+}
+.showform{
+    display: block!important;
+    
+}
+.formbox .form-control {
+  margin: 10px;
+}
+#closeform{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: larger;
+}
+#closeform:hover{
+    background-color: #ffffff;
+}
+
+i{
+    margin: 8px 20px;
+}
+.makered{
+    background-color: red!important;
+}
+.searchbox{
+  display: none;
+  position: absolute;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 22px;
+  top: 10px;
+  right: 30px;
+}
